@@ -48,7 +48,7 @@ extern SD_HandleTypeDef        g_sdcard_handler;                    /* SD卡句�
 extern HAL_SD_CardInfoTypeDef  g_sd_card_info_handle;               /* SD卡信息结构体 */
 
 /* 函数声明 */
-uint8_t sd_init(void);
+uint8_t Sdio_Init(void);
 uint8_t get_sd_card_info(HAL_SD_CardInfoTypeDef *cardinfo);
 uint8_t get_sd_card_state(void);
 uint8_t sd_read_disk(uint8_t *pbuf, uint32_t saddr, uint32_t cnt);

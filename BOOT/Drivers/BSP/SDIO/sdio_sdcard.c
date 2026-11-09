@@ -6,7 +6,6 @@
 // @brief     : This file provides code for the sdio_sdcard.c file
 //***************************************************************
 
-#include "./SYSTEM/usart/usart.h"
 #include "./BSP/SDIO/sdio_sdcard.h"
 
 SD_HandleTypeDef g_sdcard_handler;            /* SD卡句柄 */
@@ -38,24 +37,7 @@ uint8_t Sdio_Init(void)
     return 0;
 }
 
-uint8_t sd_init(void)
-{
-    uint16_t retry = 0;
-    while (Sdio_Init()) /* 检测不到SD卡 */
-    {
-        retry++;
-        delay_ms(100);
-        my_printf("SD card init failed! Please check the connection and try again.\r\n");
-        if (retry > 5) /* 重试5次后放弃 */
-        {
-            my_printf("SD card initialization failed after 5 attempts. Please check the connection and try again.\r\n");
-            return 1; /* 退出初始化函数，后续操作可能无法正常进行 */
-        }
-
-    }
-    return 0;
-}
-
+/* 注意: BOOT 中不提供 sd_init() 的重试封装, 由 iap_sd.c 直接调用 Sdio_Init() */
 
 /**
  * @brief       SDIO底层驱动，时钟使能，引脚配置

@@ -9,7 +9,7 @@
 #include "stdbool.h"
 #include "math.h"
 
-#define SYS_SUPPORT_OS          1
+#define SYS_SUPPORT_OS          0   /* BOOT 基于裸机运行, 不使用 FreeRTOS */
 
 /*函数申明*******************************************************************************************/
 

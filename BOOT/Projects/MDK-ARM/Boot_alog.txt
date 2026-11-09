@@ -1,0 +1,23 @@
+[project_search_path]: ./
+[map_search_path]: ./
+[project_file_path]: .//Boot.uvprojx
+[ map_file_path]: .//output/atk_f103.map
+[parse_keil_map start]: 
+[Found keyword]: ----------Execution Region----------
+[name]:  ER_IROM1 
+[Exec base]: 0x8000000
+[Size]: 0x3738
+[Max]: 0x8000
+[Found keyword]: ----------Execution Region----------
+[name]:  RW_IRAM1 
+[Exec base]: 0x20000000
+[Size]: 0x720
+[Max]: 0x10000
+[parse_keil_map over printf bar]: 
+  RW_IRAM1 :0x20000000
+   64.00 KB :|____________________|    2.78 % (    1.78 KB /    64.00 KB) [63712 B]
+  ER_IROM1 :0x8000000
+   32.00 KB :|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö____________|   43.14 % (   13.80 KB /    32.00 KB) [18632 B]
+[export csv]: ./atk_f103_sort_by_flash.csv
+[export csv]: ./atk_f103_sort_by_ram.csv
+[export xlsx]: atk_f103_analysis.xlsx
